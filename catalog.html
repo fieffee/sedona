@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8"
+    <title>Седона</title>
+  </head>
+  <body>
+    <header>
+      <!--Учитывая, что лого является тоже навигацией -
+      можно ли его вставить пунктом списка в nav?-->
+      <nav class="main-navigation">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a href="#">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <a href="#"><img src="http://placehold.it/150x100" width="" height="" alt="Логотип"></a>
+      </div>
+    </header>
+
+    <section class="filter">
+      <form action="#" method="post">
+
+          <h3>Инфраструктура</h3>
+          <label><input type="checkbox" name="Swimming Pool"
+            value="Swimming Pool" checked>Бассейн</label>
+          <label><input type="checkbox" name="Parking"
+            value="Parking">Парковка</label>
+          <label><input type="checkbox" name="Wi-fi"
+            value="Wi-fi" checked>Wi-fi</label>
+
+
+          <h3>Тип жилья</h3>
+          <label><input type="checkbox" name="Hotel"
+            value="Hotel" checked>Гостиница</label>
+          <label><input type="checkbox" name="Motel"
+            value="Motel" checked>Мотель</label>
+          <label><input type="checkbox" name="Apartments"
+            value="Apartments" checked>Аппартаменты</label>
+
+            <h3>Стоимость в сутки (р)</h3>
+            <table>
+              <tr>
+                <td>от 0</td>
+                <td>до 3000</td>
+              </tr>
+            </table>
+        
+            <input type="range" min="0" max="5000" step="100">
+
+          <button type="submit" class="btn">Показать</button>
+
+        </form>
+    </section>
+
+    <section class="sorting">
+      <h2>Найдено:</h2>
+      <span>3</span>
+      <h3>Сортировка:</h3>
+      <a href="#">По цене</a>
+      <a href="#">По типу</a>
+      <a href="#">По рейтингу</a>
+    </section>
+
+    <section class="hotels-list">
+           <article class="item">
+             <img src="http://placehold.it/150x100"
+               width="220px" height="165px" alt="Изображение отеля">
+            <div class="content">
+              <h2>Amara Resort & Spa</h2>
+              <div>Гостиница</div>
+              <div>от 3500 р.</div>
+              <button type="submit" class="btn">Подробнее</button>
+              <button type="submit" class="btn">Забронировать</button>
+            </div>
+            <div class="rating">
+               Рейтинг: 8,5
+             </div>
+           </article>
+
+           <article class="item">
+             <img src="http://placehold.it/150x100"
+               width="220px" height="165px" alt="Изображение отеля">
+             <div class="content">
+               <h2>Desert Quail Inn</h2>
+               <div>Мотель</div>
+               <div>от 2000 р.</div>
+               <button type="submit" class="btn">Подробнее</button>
+               <button type="submit" class="btn">Забронировать</button>
+             </div>
+             <div class="rating">
+               Рейтинг: 8,9
+             </div>
+           </article>
+
+           <article class="item">
+             <img src="http://placehold.it/150x100"
+               width="220px" height="165px" alt="Изображение отеля">
+             <div class="content">
+               <h2>Villas at Poco Diablo</h2>
+               <div>Гостиница</div>
+               <div>от 4000 р.</div>
+             </div>
+             <button type="submit" class="btn">Подробнее</button>
+             <button type="submit" class="btn">Забронировать</button>
+             <div class="rating">
+               Рейтинг: 9,2
+             </div>
+           </article>
+
+    <footer>
+      <section class="footer-hashtag">
+        <div>#Visitsedona</div>
+      </section>
+
+      <section class="footer-social">
+        <a href="http://www.twitter.com"><img src="#"></a>
+        <a href="http://www.facebook.com"><img src="#"></a>
+        <a href="http://www.youtube.com"><img src="#"></a>
+      </section>
+
+      <section class="footer-copyright">
+        <div class="description">Website by</div>
+        <a href="http://www.htmlacademy.ru"><img src="#"></a>
+      </section>
+    </footer>
+
+  </body>
+</html>
