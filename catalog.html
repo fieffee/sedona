@@ -1,13 +1,13 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
 
-    <header>
+  <body>
+    <header class="main-header">
       <nav class="main-navigation">
         <ul>
           <li>
@@ -25,137 +25,156 @@
         </ul>
       </nav>
       <div class="logo">
-        <a href="index.html"><img src="http://placehold.it/150x100" width="" height="" alt="Логотип"></a>
+        <a href="index.html"><img src="img/logo.png" width="138" height="70" alt="Логотип"></a>
       </div>
     </header>
 
-    <section class="filter">
-      <form action="#" method="post">
-          <!-- Оправданно использовать див для каждого из 3х видов фильтров для их позиционирования?
-               Или есть другой более оптимальный способ?-->
-          <div class="choise-1">
-            <h3>Инфраструктура:</h3>
-            <label><input type="checkbox" name="Swimming Pool" value="Swimming Pool" checked>Бассейн</label>
-            <label><input type="checkbox" name="Parking" value="Parking">Парковка</label>
-            <label><input type="checkbox" name="Wi-fi" value="Wi-fi" checked>Wi-fi</label>
-          </div>
-
-          <div class="choise-2">
-            <h3>Тип жилья:</h3>
-            <label><input type="checkbox" name="Hotel" value="Hotel" checked>Гостиница</label>
-            <label><input type="checkbox" name="Motel" value="Motel" checked>Мотель</label>
-            <label><input type="checkbox" name="Apartments" value="Apartments" checked>Аппартаменты</label>
-          </div>
-
-          <div class="range=filter">
-            <h3>Стоимость в сутки (р):</h3>
-            <div class="price-controls">
-                <label>от <input class="min-price" type="text" value="0"></label>
-                <label>до <input class="max-price" type="text" value="30 000"></label>
+    <main>
+      <section class="filter clearfix">
+        <form action="#" method="post">
+            <!-- Оправданно использовать див для каждого из 3х видов фильтров для их позиционирования?
+                 Или есть другой более оптимальный способ?-->
+            <div class="choise-1">
+              <h3>Инфраструктура:</h3>
+              <ul>
+                <li>
+                  <label><input type="checkbox" name="Swimming Pool" value="Swimming Pool" checked>Бассейн</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="Parking" value="Parking">Парковка</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="Wi-fi" value="Wi-fi" checked>Wi-fi</label>
+                </li>
+              </ul>
             </div>
-            <div class="range-controls">
-              <div class="bar"></div>
-              <div class="toggle min-toggle"></div>
-              <div class="toggle max-toggle"></div>
+
+            <div class="choise-2">
+              <h3>Тип жилья:</h3>
+              <ul>
+                <li>
+                  <label><input type="checkbox" name="Hotel" value="Hotel" checked>Гостиница</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="Motel" value="Motel" checked>Мотель</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="Apartments" value="Apartments" checked>Аппартаменты</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="choise-3">
+              <h3>Стоимость в сутки (р):</h3>
+              <div class="price-controls">
+                  <label>от <input class="min-price" type="text" value="0"></label>
+                  <label>до <input class="max-price" type="text" value="30 000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="bar"></div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
+                <button type="submit" class="btn">Показать</button>
+              </div>
+            </div>
+
+
+
+          </form>
+      </section>
+
+      <section class="sorting">
+        <h2>Найдено:</h2>
+        <span>3</span>
+        <h3>Сортировка:</h3> <!-- ?-->
+        <a href="#">По цене</a>
+        <a href="#">По типу</a>
+        <a href="#">По рейтингу</a>
+      </section>
+
+      <section class="hotels-list">
+        <article class="item">
+          <div class="photo-hotel">
+            <img src="http://placehold.it/150x100" width="220" height="165" alt="Изображение отеля">
+          </div>
+          <div class="content clearfix">
+            <h2>Amara Resort & Spa</h2>
+            <!--Аналогично вопросу выше. Кажется, что нет необходимости в дивах "hotel-info" и "price-info"
+                Но придумать как без них позиционировать не могу.-->
+            <div class="hotel-info">
+              <div class="type">Гостиница</div>
+              <a href="#" class="btn-info">Подробнее</a>
+            </div>
+            <div class="price-info">
+              <div>от <span>3500 р.</span></div>
+              <a href="#" class="btn-booking">Забронировать</a>
             </div>
           </div>
 
-          <button type="submit" class="btn">Показать</button>
-
-        </form>
-    </section>
-
-    <section class="sorting">
-      <h2>Найдено:</h2>
-      <span>3</span>
-      <h3>Сортировка:</h3> <!-- ?-->
-      <a href="#">По цене</a>
-      <a href="#">По типу</a>
-      <a href="#">По рейтингу</a>
-    </section>
-
-    <section class="hotels-list">
-      <article class="item">
-        <div class="photo-hotel">
-          <img src="http://placehold.it/150x100" width="220" height="165" alt="Изображение отеля">
-        </div>
-        <div class="content clearfix">
-          <h2>Amara Resort & Spa</h2>
-          <!--Аналогично вопросу выше. Кажется, что нет необходимости в дивах "hotel-info" и "price-info"
-              Но придумать как без них позиционировать не могу.-->
-          <div class="hotel-info">
-            <div class="type">Гостиница</div>
-            <a href="#" class="btn-info">Подробнее</a>
+          <div class="rating">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <div>Рейтинг: 8,5</div>
           </div>
-          <div class="price-info">
-            <div>от <span>3500 р.</span></div>
-            <a href="#" class="btn-booking">Забронировать</a>
-          </div>
-        </div>
+        </article>
 
-        <div class="rating">
-          <span class="star"></span>
-          <span class="star"></span>
-          <span class="star"></span>
-          <span class="star"></span>
-          <span class="star"></span>
-          <div>Рейтинг: 8,5</div>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="photo-hotel">
-          <img src="http://placehold.it/150x100" width="220" height="165" alt="Изображение отеля">
-        </div>
-        <div class="content clearfix">
-          <h1>Desert Quail Inn</h1>
-          <div class="hotel-info">
-            <div class="type">Мотель</div>
-            <a href="#" class="btn-info">Подробнее</a>
+        <article class="item">
+          <div class="photo-hotel">
+            <img src="http://placehold.it/150x100" width="220" height="165" alt="Изображение отеля">
           </div>
-          <div class="price-info">
-            <div>от <span>2000 р.</span></div>
-            <a href="#" class="btn-booking">Забронировать</a>
+          <div class="content clearfix">
+            <h1>Desert Quail Inn</h1>
+            <div class="hotel-info">
+              <div class="type">Мотель</div>
+              <a href="#" class="btn-info">Подробнее</a>
+            </div>
+            <div class="price-info">
+              <div>от <span>2000 р.</span></div>
+              <a href="#" class="btn-booking">Забронировать</a>
+            </div>
           </div>
-        </div>
-        <div class="rating">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <div>Рейтинг: 8,9</div>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="photo-hotel">
-          <img src="http://placehold.it/150x100" width="220" height="165" alt="Изображение отеля">
-        </div>
-        <div class="content clearfix">
-          <h1>Villas at Poco Diablo</h1>
-          <div class="hotel-info">
-            <div class="type">Апартаменты</div>
-            <a href="#" class="btn-info">Подробнее</a>
+          <div class="rating">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <div>Рейтинг: 8,9</div>
           </div>
-          <div class="price-info">
-            <div>от <span>4000 р.</span></div>
-            <a href="#" class="btn-booking">Забронировать</a>
+        </article>
+
+        <article class="item">
+          <div class="photo-hotel">
+            <img src="http://placehold.it/150x100" width="220" height="165" alt="Изображение отеля">
           </div>
-        </div>
-        <div class="rating">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <div>Рейтинг: 9,2</div>
-        </div>
-      </article>
+          <div class="content clearfix">
+            <h1>Villas at Poco Diablo</h1>
+            <div class="hotel-info">
+              <div class="type">Апартаменты</div>
+              <a href="#" class="btn-info">Подробнее</a>
+            </div>
+            <div class="price-info">
+              <div>от <span>4000 р.</span></div>
+              <a href="#" class="btn-booking">Забронировать</a>
+            </div>
+          </div>
+          <div class="rating">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <div>Рейтинг: 9,2</div>
+          </div>
+        </article>
 
-    </section>
+      </section>
+    </main>
 
-    <footer>
+    <footer class="main-footer clearfix">
       <section class="footer-hashtag">
         <span>#Visitsedona</span>
       </section>
@@ -179,6 +198,7 @@
         </a>
       </section>
     </footer>
+
 
   </body>
 </html>

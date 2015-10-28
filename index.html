@@ -1,15 +1,15 @@
-<!DOCTYPE HTML>
+<!DOCTYPE ht>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <div class="context">
+    <div class="container">
 
-      <header>
+      <header class="main-header">
         <nav class="main-navigation">
           <ul>
             <li>
@@ -19,136 +19,127 @@
               <a href="#">Фото и видео</a>
             </li>
             <li>
-              <a href="#">Карта штата</a>
+              <a href="#">Гостиницы</a>
             </li>
             <li>
-              <a href="#">Гостиницы</a>
+              <a href="#">Карта штата</a>
             </li>
           </ul>
         </nav>
         <div class="logo">
-          <a href="index.html"><img src="http://placehold.it/150x100" width="" height="" alt="Логотип"></a>
+          <a href="index.html"><img src="img/logo.png" width="138" height="70" alt="Логотип"></a>
         </div>
       </header>
+      <main>
+        <section class="intro">
+          <!--Почему нельзя одну картинку в див или в  img?
+          При 4 дивах - придется задавать каждому отдельно размеры и позиционирование
+         -->
 
-      <section class="intro">
-          <img src="#" width="" height="" alt="Welcome">
-          <img src="#" width="" height="" alt="to the gorgeous">
-          <img src="#" width="" height="" alt="Sedona">
-          <img src="#" width="" height="" alt="Because the Grand Canyoun sucks!">
-      </section>
+            <img src="img/welcome.png" width="" height="" alt="Welcome">
+            <img src="#" width="" height="" alt="to the gorgeous">
+            <img src="#" width="" height="" alt="Sedona">
+            <img src="#" width="" height="" alt="Because the Grand Canyoun sucks!">
 
-    <!--Второй вариант реализации:
-    сделать 4 дива, каждому задать фон в виде спрайта и спозиционировать его.
-   -->
+            <!--Не понятно где должно это распологаться -->
+            <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
+            <div class="description">Рассмотрим 5 причин, по которыми Седона круче, чем Гранд Каньон!</div>
+        </section>
 
-      <section class="mainpage-content">
 
-        <div class="title">
-          <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
-          <div class="description">Рассмотрим 5 причин, по которыми Седона круче, чем Гранд Каньон!</div>
-        </div>
-
-        <div class="main-reasons clearfix">
-          <div class="text-block">
-            <h3>Настоящий городок</h3>
-            <div class="number">№1</div>
-            <div class="description">Седона - не аттракцион для туристовов, там течет своя жизнь</div>
-          </div>
-          <div class="photo">
-            <!--Можно реализовать через фон дива -->
-            <img src="http://placehold.it/150x100" width="" height="" alt="Городок Седона">
-          </div>
-        </div>
-
-        <div class="features clearfix">
-          <div class="text-block">
-            <img src="http://placehold.it/150x100" width="" height="" alt="Домик">
-            <h3>Жилье</h3>
-            <div class="description">Рекомендуем пожить в настоящем мотеле, все как в кино</div>
+        <section class="mainpage-content">
+          <div class="reason-1">
+            <div class="text-block">
+              <h3>Настоящий городок</h3>
+              <div class="number">№1</div>
+              <div class="description">Седона - не аттракцион для туристовов, там течет своя жизнь</div>
+            </div>
           </div>
 
-          <div class="text-block">
-            <img src="http://placehold.it/150x100" width="" height="" alt="Бургер">
-            <h3>Еда</h3>
-            <div class="description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+          <div class="features clearfix">
+            <div class="text-block">
+              <img src="img/house.png" width="75" height="72" alt="Домик">
+              <h3>Жилье</h3>
+              <div class="description">Рекомендуем пожить в настоящем мотеле, все как в кино</div>
+            </div>
+            <div class="text-block">
+              <img src="img/burger.png" width="74" height="70" alt="Бургер">
+              <h3>Еда</h3>
+              <div class="description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+            </div>
+            <div class="text-block">
+              <img src="img/gift.png" width="64" height="76" alt="Подарок">
+              <h3>Сувениры</h3>
+              <div class="description">Не только китайского, но и местного производства!</div>
+            </div>
           </div>
 
-          <div class="text-block">
-            <img src="http://placehold.it/150x100" width="" height="" alt="Подарок">
-            <h3>Сувениры</h3>
-            <div class="description">Не только китайского, но и местного производства!</div>
-          </div>
-        </div>
-
-        <div class="main-reasons clearfix">
-          <div class="photo">
-            <img src="http://placehold.it/150x100" width="" height="" alt="Мост дьявола">
-          </div>
-          <div class="text-block">
-            <h3>Там есть мост дьявола</h3>
-            <div class="number">№2</div>
-            <div class="description">Да, по нему можно пройти! Если конечно вы осмелитесь</div>
-          </div>
-        </div>
-
-        <div class="other-reasons clearfix">
-          <div class="text-block">
-            <h3>Небольшая площадь</h3>
-            <div class="number">№3</div>
-            <div class="description">Все достопримечательности находятся очень близко</div>
+          <div class="reason-2">
+            <div class="text-block">
+              <h3>Там есть мост дьявола</h3>
+              <div class="number">- №2 -</div>
+              <div class="description">Да, по нему можно пройти! Если конечно вы осмелитесь</div>
+            </div>
           </div>
 
-          <div class="text-block">
-            <h3>Красивая дорога</h3>
-            <div class="number">№4</div>
-            <div class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</div>
+
+          <div class="other-reasons clearfix">
+            <div class="text-block">
+              <h3>Небольшая площадь</h3>
+              <div class="number">№3</div>
+              <div class="description">Все достопримечательности находятся очень близко</div>
+            </div>
+            <div class="text-block">
+              <h3>Красивая дорога</h3>
+              <div class="number">№4</div>
+              <div class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</div>
+            </div>
+            <div class="text-block">
+              <h3>Мало туристов</h3>
+              <div class="number">№5</div>
+              <div class="description">Большинство едет в Гранд Каньон и толпятся там</div>
+            </div>
           </div>
-
-          <div class="text-block">
-            <h3>Мало туристов</h3>
-            <div class="number">№5</div>
-            <div class="description">Большинство едет в Гранд Каньон и толпятся там</div>
+          <div class="form-title">
+            <h2>Заинтересовались?</h2>
+            <div class="description">Укажите предполагаемые даты поездки,<br>
+              и мы покажем вам лучшие предложения гостиниц в Седоне</div>
+            <a href="#" class="open-form">Поиск гостиницы в Седоне</a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="form">
+        <section class="form">
+          <form action="#" method="post">
+            <ul>
+              <li>
+                <label>Дата заезда:<input type="date" name="date" value=""></label>
+              </li>
+              <li>
+                <label>Дата выезда:<input type="date" name="date" value=""></label>
+              </li>
+              <li>
+                <label for="adult">Взрослые</label>
+                <button class="btn btn-subtract"></button>
+                <input type="text" name="adult" value="" id="adult">
+                <button class="btn btn-add"></button>
+              </li>
+              <li>
+                <label for="child">Дети</label>
+                <button class="btn-subtract"></button>
+                <input type="text" name="child" value="" id="child">
+                <button class="btn-add"></button>
+              </li>
+            </ul>
+            <button type="submit" class="btn-search">Найти</button>
+          </form>
+        </section>
 
-        <div class="container">
-        <h2>Заинтересовались?</h2>
-        <div class="description">Укажите предполагаемые даты поездки,<br>
-          и мы покажем вам лучшие предложения гостиниц в Седоне</div>
-        </div>
-      </section>
+        <section class="map">
+          <img src="img/map.jpg" width="1200" height="593" alt="Карта">
+        </section>
+      </main>
 
-      <section class="form">
-        <a href="#">Поиск гостиницы в Седоне</a>
-
-        <form action="#" method="post">
-          <label>Дата заезда<input type="date" name="date" value=""></label>
-          <label>Дата выезда<input type="date" name="date" value=""></label>
-
-          <label for="adult">Взрослые</label>
-          <button class="btn btn-subtract"></button>
-          <input type="text" name="adult" value="" id="adult">
-          <button class="btn btn-add"></button>
-
-          <label for="child">Дети</label>
-          <button class="btn-subtract"></button>
-          <input type="text" name="child" value="" id="child">
-          <button class="btn-add"></button>
-
-          <button type="submit" class="btn-search">Найти</button>
-        </form>
-      </section>
-
-      <section class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671595.076607671!2d-112.59320619470485!3d35.0858768458844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1445188500154"
-      width="100%" height="450" style="border:0" allowfullscreen></iframe>
-      </section>
-
-      <footer>
+      <footer class="main-footer clearfix">
         <section class="footer-hashtag">
           <span>#Visitsedona</span>
         </section>
@@ -172,7 +163,7 @@
           </a>
         </section>
       </footer>
-      
+
     </div>
   </body>
 </html>

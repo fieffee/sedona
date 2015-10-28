@@ -1,20 +1,272 @@
 body {
-  font-style:
-  font-size:
-  line-height:
-  font-family:
+  font-weight: regular;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PT Sans";
+  text-transform: uppercase;
+  color: #000000;
+  background: #f2f2f2;
+
 }
 
 h1 {
-  font-style:
-  font-size:
-  line-height:
-  font-family:
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
 }
 
 h2 {
-  font-style:
-  font-size:
-  line-height:
-  font-family:
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+/*— Правильно ли реализовывать этот пункт через margin?
+При достижении 1200px сетка перестаёт масштабироваться дальше,
+ и слева и справа от неё появляется серый фон, на который сайт бросает лёгкую тень. */
+
+ /*Тут не нужно паддинги для контейнера выставлять, как в других макетах? Смотрю по критериям*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 0 #34495e; /* Параметры тени поставлены пока наобум. Надо разобраться*/
+  background-color: #ffffff;
+}
+
+/*Внутренние отступы слева и справа для главного меню и для внутренней страницы — по 6% от ширины всей контентной области.
+При реализации этого пункта ширина пунктов списка с 240 уменьшается до 211(:
+Внутренняя страница - это что? Если делать для main - то получается фигня)?*/
+
+.main-header {
+  background: #ffffff;
+  height: 56px;
+}
+
+.main-navigation {
+  box-sizing: border-box;
+  padding: 0 6%;
+  width: 100%;
+}
+
+.main-navigation ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.main-navigation li {
+   display: inline-block;
+   width: 20%;
+}
+
+.main-navigation li a {
+  display: block;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.main-navigation li:nth-child(1),
+.main-navigation li:nth-child(2) {
+  float: left;
+  text-align: left;
+}
+
+/*Пришлось поменять местами пункты li. Можно было как-то по другому это решить?
+— Главное меню: четыре ячейки по 20% ширины. Для первых двух пунктов выравнивание по левому краю, для двух последних — по правому.*/
+.main-navigation li:nth-child(3),
+.main-navigation li:nth-child(4)  {
+  float: right;
+  text-align: right;
+}
+
+
+.logo {
+  width: 138px;
+  margin: 0 auto;
+}
+
+/*Надо разобраться с картинками и с белым фоном внизу */
+.intro {
+  height: 773px;
+  background: url("../img/bg_intro.jpg") no-repeat;
+}
+
+
+/*Как реализовать этот пункт? При проверки инспектором ширина не меняется :()
+— Фотографии, занимающие по две трети ширины вставляются так, чтобы обрезаться сверху и снизу при увеличении размера
+(ширина 66%, высота подстраивается под ширину, чтобы не нарушать пропорций, но фото не выходит за отведённую для него зону).*/
+.reason-1 {
+  background: #81b3d2 url("../img/photo1.jpg") no-repeat 100% 50%;
+  background-size: 66% auto;
+}
+
+.reason-1 .text-block {
+  width: 33%;
+  min-height: 140px;
+  padding: 55px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+/*Как прибить второй блок справа? */
+.reason-2 {
+  background: #81b3d2 url("../img/photo2.jpg") no-repeat 0% 50%;
+  background-size: 66% auto;
+}
+
+.reason-2 .text-block {
+  width: 33%;
+  min-height: 140px;
+  padding: 55px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.features {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+
+.features .text-block {
+  float: left;
+  width: 33%;
+  min-height: 185px;
+  text-align: center;
+}
+
+/*Без width блок не растягивался на 100%. Есть ли другой способ решить этот вопрос?*/
+.other-reasons {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 65px;
+  background: #eeeeee;
+}
+
+.other-reasons .text-block {
+  float: left;
+  width: 33%;
+  min-height: 140px;
+  text-align: center;
+}
+
+.features .text-block:last-child,
+.other-reasons .text-block:last-child {
+
+}
+
+
+/*Ну собственно и форму надо дооформить*/
+
+.form-title {
+  text-align: center;
+}
+
+.form {
+  padding: 56px;
+  width: 480px;
+  outline: 1px solid #eeeeee;
+  margin: 0 auto;
+}
+
+.form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form ul li {
+  display: inline;
+  padding: 20px;
+}
+
+input[type="date"] {
+    width: 345px;
+    height: 37px;
+    margin-bottom: 30px;
+}
+
+.btn-search {
+  width: 455px;
+  height: 55px;
+  background: #81b3d2;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 21px;
+}
+
+.open-form {
+  display: inline-block;
+  width: 592px;
+  height: 22px;
+  padding: 30px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 21px;
+  background: #766357;
+  text-align: center;
+}
+
+.map {
+}
+
+/*Не смогла придумать, как его положить на карту. Пробовала через абсолютное позиционирование - не получилось */
+.main-footer {
+  width: 100%;
+  height: 40px;
+  padding: 40px 0;
+  background: #fcfcfb;
+}
+
+.main-footer section {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+.main-footer section:last-child {
+  float: right;
+}
+
+.clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.filter {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 6%;
+  background: url("../img/bg_hotels.png") no-repeat 50% 50%;
+}
+
+.filter ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form ul li {
+  display: inline;
+  padding: 20px;
+}
+
+.choise-1, .choise-2 {
+  float: left;
+  width: 20%;
+
+}
+
+.choise-3 {
+  float: right;
 }
