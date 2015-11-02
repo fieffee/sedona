@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" >
   </head>
 
   <body>
     <div class="container">
-
-      <header class="main-header">
+      <header class="main-header clearfix">
         <nav class="main-navigation">
           <ul>
             <li>
@@ -19,10 +20,10 @@
               <a href="#">Фото и видео</a>
             </li>
             <li>
-              <a href="#">Гостиницы</a>
+              <a href="#">Карта штата</a>
             </li>
             <li>
-              <a href="#">Карта штата</a>
+              <a href="#">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -30,29 +31,24 @@
           <a href="index.html"><img src="img/logo.png" width="138" height="70" alt="Логотип"></a>
         </div>
       </header>
-      <main>
+
+      <main class="index-main">
         <section class="intro">
-          <!--Почему нельзя одну картинку в див или в  img?
-          При 4 дивах - придется задавать каждому отдельно размеры и позиционирование
-         -->
-
-            <img src="img/welcome.png" width="" height="" alt="Welcome">
-            <img src="#" width="" height="" alt="to the gorgeous">
-            <img src="#" width="" height="" alt="Sedona">
-            <img src="#" width="" height="" alt="Because the Grand Canyoun sucks!">
-
-            <!--Не понятно где должно это распологаться -->
-            <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
-            <div class="description">Рассмотрим 5 причин, по которыми Седона круче, чем Гранд Каньон!</div>
+            <img class="title-image" src="img/welcome.png" width="458" height="352" alt="Welcome to the gorgeous Sedona because the Grand Canyoun sucks!">
         </section>
 
-
         <section class="mainpage-content">
+          <div class="title">
+            <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+            <div class="description">Рассмотрим 5 причин, по которыми Седона круче, чем Гранд Каньон!</div>
+          </div>
+
           <div class="reason-1">
             <div class="text-block">
-              <h3>Настоящий городок</h3>
-              <div class="number">№1</div>
-              <div class="description">Седона - не аттракцион для туристовов, там течет своя жизнь</div>
+              <h3>Настоящий<br>
+                городок</h3>
+              <div class="number">&mdash; №1 &mdash;</div>
+              <div class="description">Седона - не аттракцион для туристов, там течет своя жизнь</div>
             </div>
           </div>
 
@@ -70,15 +66,15 @@
             <div class="text-block">
               <img src="img/gift.png" width="64" height="76" alt="Подарок">
               <h3>Сувениры</h3>
-              <div class="description">Не только китайского, но и местного производства!</div>
+              <div class="description">Не только китайского, но&nbsp;и&nbsp;местного&nbsp;производства!</div>
             </div>
           </div>
 
-          <div class="reason-2">
+          <div class="reason-2 clearfix">
             <div class="text-block">
-              <h3>Там есть мост дьявола</h3>
-              <div class="number">- №2 -</div>
-              <div class="description">Да, по нему можно пройти! Если конечно вы осмелитесь</div>
+              <h3>Там есть мост&nbsp;дьявола</h3>
+              <div class="number">&mdash; №2 &mdash;</div>
+              <div class="description">Да, по нему можно пройти! Если&nbsp;конечно вы осмелитесь</div>
             </div>
           </div>
 
@@ -86,56 +82,48 @@
           <div class="other-reasons clearfix">
             <div class="text-block">
               <h3>Небольшая площадь</h3>
-              <div class="number">№3</div>
-              <div class="description">Все достопримечательности находятся очень близко</div>
+              <div class="number">&mdash; №3 &mdash;</div>
+              <div class="description">Все достопримечате-<br>льности находятся очень близко</div>
             </div>
             <div class="text-block">
               <h3>Красивая дорога</h3>
-              <div class="number">№4</div>
-              <div class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</div>
+              <div class="number">&mdash; №4 &mdash;</div>
+              <div class="description">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</div>
             </div>
             <div class="text-block">
               <h3>Мало туристов</h3>
-              <div class="number">№5</div>
+              <div class="number">&mdash; №5 &mdash;</div>
               <div class="description">Большинство едет в Гранд Каньон и толпятся там</div>
             </div>
           </div>
+        </section>
+        <section class="search-hotel">
           <div class="form-title">
             <h2>Заинтересовались?</h2>
             <div class="description">Укажите предполагаемые даты поездки,<br>
               и мы покажем вам лучшие предложения гостиниц в Седоне</div>
+          </div>
+          <div class="form">
             <a href="#" class="open-form">Поиск гостиницы в Седоне</a>
+            <form class="form-window" action="#" method="post">
+                  <label>Дата заезда:<input type="date" name="date" value=""></label>
+                  <label>Дата выезда:<input type="date" name="date" value=""></label>
+                  <label for="adult">Взрослые</label>
+                  <button class="btn btn-subtract"></button>
+                  <input type="text" name="adult" value="" id="adult">
+                  <button class="btn btn-add"></button>
+                  <label for="child">Дети</label>
+                  <button class="btn-subtract"></button>
+                  <input type="text" name="child" value="" id="child">
+                  <button class="btn-add"></button>
+              <button type="submit" class="btn-search">Найти</button>
+            </form>
           </div>
         </section>
 
-        <section class="form">
-          <form action="#" method="post">
-            <ul>
-              <li>
-                <label>Дата заезда:<input type="date" name="date" value=""></label>
-              </li>
-              <li>
-                <label>Дата выезда:<input type="date" name="date" value=""></label>
-              </li>
-              <li>
-                <label for="adult">Взрослые</label>
-                <button class="btn btn-subtract"></button>
-                <input type="text" name="adult" value="" id="adult">
-                <button class="btn btn-add"></button>
-              </li>
-              <li>
-                <label for="child">Дети</label>
-                <button class="btn-subtract"></button>
-                <input type="text" name="child" value="" id="child">
-                <button class="btn-add"></button>
-              </li>
-            </ul>
-            <button type="submit" class="btn-search">Найти</button>
-          </form>
-        </section>
-
         <section class="map">
-          <img src="img/map.jpg" width="1200" height="593" alt="Карта">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418696.7210907924!2d-111.29938265430005!3d34.92982815938105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1446389997966" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+
         </section>
       </main>
 
@@ -145,21 +133,15 @@
         </section>
 
         <section class="footer-social">
-          <a href="http://www.twitter.com">
-            <img src="#" width="#" height="" alt="Twitter">
-          </a>
-          <a href="http://www.facebook.com">
-            <img src="#" width="#" height="" alt="Facebook">
-          </a>
-          <a href="http://www.youtube.com">
-            <img src="#" width="#" height="" alt="Youtube">
-          </a>
+          <a class="btn-social btn-tw" href="http://www.twitter.com">Мы в Тwitter</a>
+          <a class="btn-docial btn-fb" href="http://www.facebook.com">Мы в Facebook</a>
+          <a class="btn-docial btn-youtube" href="http://www.youtube.com">Мы на Youtube</a>
         </section>
 
         <section class="footer-copyright">
           <span class="description">Website by</span>
           <a href="http://www.htmlacademy.ru">
-            <img src="#" width="#" height="" alt="Html Academy">
+            <img src="img/HtmlAcademy.png" width="113" height="39" alt="Html Academy">
           </a>
         </section>
       </footer>
