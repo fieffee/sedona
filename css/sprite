@@ -1,197 +1,185 @@
-.sprite {
+. {
     background-image: url(spritesheet.png);
     background-repeat: no-repeat;
     display: block;
 }
 
-.sprite-arrow-down {
+.-arrow-down {
     width: 11px;
     height: 10px;
-    background-position: -5px -5px;
+    background-position: -10px -10px;
 }
 
-.sprite-arrow-down-down {
+.-arrow-down-down {
     width: 11px;
     height: 10px;
-    background-position: -26px -5px;
+    background-position: -10px -40px;
 }
 
-.sprite-arrow-down-hvr {
+.-arrow-down-hvr {
     width: 11px;
     height: 10px;
-    background-position: -47px -5px;
+    background-position: -10px -70px;
 }
 
-.sprite-arrow-up {
+.-arrow-up {
     width: 11px;
     height: 10px;
-    background-position: -68px -5px;
+    background-position: -10px -100px;
 }
 
-.sprite-arrow-up-down {
+.-arrow-up-down {
     width: 11px;
     height: 10px;
-    background-position: -89px -5px;
+    background-position: -10px -130px;
 }
 
-.sprite-arrow-up-hvr {
+.-arrow-up-hvr {
     width: 11px;
     height: 10px;
-    background-position: -110px -5px;
+    background-position: -10px -160px;
 }
 
-.sprite-calendar {
+.-calendar {
     width: 21px;
     height: 22px;
-    background-position: -131px -5px;
+    background-position: -10px -190px;
 }
 
-.sprite-calendar-down {
+.-calendar-down {
     width: 21px;
     height: 22px;
-    background-position: -162px -5px;
+    background-position: -10px -232px;
 }
 
-.sprite-calendar-hvr {
+.-calendar-hvr {
     width: 21px;
     height: 22px;
-    background-position: -193px -5px;
+    background-position: -10px -274px;
 }
 
-.sprite-checkbox {
+.-checkbox {
     width: 22px;
     height: 22px;
-    background-position: -224px -5px;
+    background-position: -10px -316px;
 }
 
-.sprite-checkbox-checked {
+.-checkbox-checked {
     width: 26px;
     height: 22px;
-    background-position: -5px -37px;
+    background-position: -10px -358px;
 }
 
-.sprite-checkbox-checked-dis {
+.-checkbox-checked-dis {
     width: 26px;
     height: 22px;
-    background-position: -41px -37px;
+    background-position: -10px -400px;
 }
 
-.sprite-checkbox-checked-hvr {
+.-checkbox-checked-hvr {
     width: 26px;
     height: 22px;
-    background-position: -77px -37px;
+    background-position: -10px -442px;
 }
 
-.sprite-checkbox-dis {
+.-checkbox-dis {
     width: 22px;
     height: 22px;
-    background-position: -113px -37px;
+    background-position: -10px -484px;
 }
 
-.sprite-checkbox-hvr {
+.-checkbox-hvr {
     width: 22px;
     height: 22px;
-    background-position: -145px -37px;
+    background-position: -10px -526px;
 }
 
-.sprite-fb {
+.-fb {
     width: 47px;
     height: 47px;
-    background-position: -177px -37px;
+    background-position: -10px -568px;
 }
 
-.sprite-fb-down {
+.-fb-down {
     width: 47px;
     height: 47px;
-    background-position: -5px -94px;
+    background-position: -10px -635px;
 }
 
-.sprite-logo {
+.-logo {
     width: 113px;
     height: 39px;
-    background-position: -62px -94px;
+    background-position: -10px -702px;
 }
 
-.sprite-logo-down {
+.-logo-down {
     width: 113px;
     height: 39px;
     background-position: -62px -143px;
 }
 
-.sprite-logo-hvr {
+.-logo-hvr {
     width: 113px;
     height: 39px;
-    background-position: -5px -192px;
+    background-position: -10px -820px;
 }
 
-.sprite-minus {
+.-minus {
     width: 35px;
     height: 35px;
-    background-position: -185px -94px;
+    background-position: -10px -879px;
 }
 
-.sprite-minus-down {
+.-minus-down {
     width: 35px;
     height: 35px;
-    background-position: -185px -139px;
+    background-position: -10px -934px;
 }
 
-.sprite-minus-hvr {
+.-minus-hvr {
     width: 35px;
     height: 35px;
-    background-position: -185px -184px;
+    background-position: -10px -989px;
 }
 
-.sprite-plus {
+.-plus {
     width: 35px;
     height: 35px;
-    background-position: -256px -5px;
+    background-position: -10px -1044px;
 }
 
-.sprite-plus-down {
+.-plus-down {
     width: 35px;
     height: 35px;
-    background-position: -234px -50px;
+    background-position: -10px -1099px;
 }
 
-.sprite-plus-hvr {
+.-plus-hvr {
     width: 35px;
     height: 35px;
-    background-position: -230px -95px;
+    background-position: -10px -1154px;
 }
 
-.sprite-slide {
-    width: 20px;
-    height: 23px;
-    background-position: -230px -140px;
-}
-
-.sprite-slide-hvr {
-    width: 20px;
-    height: 23px;
-    background-position: -260px -140px;
-}
-
-.sprite-tw {
+.-tw {
     width: 47px;
     height: 47px;
-    background-position: -230px -173px;
+    background-position: -10px -1209px;
 }
 
-.sprite-tw-down {
+.-tw-down {
     width: 47px;
     height: 47px;
-    background-position: -128px -230px;
+    background-position: -10px -1276px;
 }
 
-.sprite-youtube {
+.-youtube {
     width: 47px;
     height: 47px;
-    background-position: -185px -230px;
+    background-position: -10px -1343px;
 }
 
-.sprite-youtube-down {
+.-youtube-down {
     width: 47px;
     height: 47px;
-    background-position: -242px -230px;
+    background-position: -10px -1410px;
 }

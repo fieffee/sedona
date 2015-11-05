@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" >
   </head>
 
@@ -105,17 +105,13 @@
             <a href="#" class="btn-open-form">Поиск гостиницы в Седоне</a>
             <form class="window-form" action="#" method="post">
               <label for="date-arrival" class="date">Дата заезда:</label>
-              <input type="text" name="date-arrival" value="" placeholder="24 апреля 2014" id="date-arrival">
+              <input class="date" type="text" name="date-arrival" value="" placeholder="24 апреля 2014" id="date-arrival">
               <label for="date-departure" class="date">Дата выезда:</label>
-              <input type="text" name="date-departure" value="" placeholder="4 июля 2014" id="date-departure">
-              <label for="adult">Взрослые:</label>
-              <button class="btn btn-subtract"></button>
-              <input type="text" name="adult" placeholder="2" value="" id="adult">
-              <button class="btn btn-add"></button>
-              <label for="child">Дети:</label>
-              <button class="btn btn-subtract"></button>
-              <input type="text" name="child" placeholder="4" value="" id="child">
-              <button class="btn btn-add"></button>
+              <input class="date" type="text" name="date-departure" value="" placeholder="4 июля 2014" id="date-departure">
+              <label class="adult" for="adult">Взрослые:</label>
+              <input class="quantity" type="text" name="adult" placeholder="2" value="" id="adult">
+              <label class="child" for="child">Дети:</label>
+              <input class="quantity" type="text" name="child" placeholder="4" value="" id="child">
               <button type="submit" class="btn-search">Найти</button>
             </form>
         </section>
@@ -138,7 +134,7 @@
         </section>
 
         <section class="footer-copyright">
-          <span class="description">Website by</span>
+          <span>Website by</span>
           <a class="logo-html" href="http://www.htmlacademy.ru">Html Academy</a>
         </section>
       </footer>

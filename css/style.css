@@ -158,10 +158,6 @@ a {
   padding-bottom: 50px;
 }
 
-.main-reason h3 {
-  color: #ffffff;
-}
-
 .main-reason .text-block {
   width: 19%;
   min-height: 150px;
@@ -169,6 +165,10 @@ a {
   padding-bottom: 50px;
   color: #ffffff;
   text-align: center;
+}
+
+.main-reason h3 {
+  color: #ffffff;
 }
 
 .sedona-city {
@@ -203,7 +203,9 @@ a {
 }
 
 .features img {
-  padding-bottom: 30px;
+  width: 75px;
+  height: 72px;
+  margin-bottom: 30px;
 }
 
 .other-reasons {
@@ -250,19 +252,8 @@ a {
   padding: 55px 55px;
   font-weight: bold;
   line-height: 26px;
-  text-align: center;
+  text-align: left;
   background-color: #ffffff;
-}
-
-.window-form input {
-  height: 37px;
-  margin-bottom: 30px;
-  padding: 15px;
-  border: none;
-  background-color: #f2f2f2;
-  cursor: pointer;
-  text-transform: uppercase;
-  color: #000000;
 }
 
 input[type="text"]::-webkit-input-placeholder {
@@ -289,97 +280,78 @@ input[type="text"]:-ms-input-placeholder {
   color: #000000;
 } */
 
+.window-form input {
+  height: 37px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.window-form label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 103px;
+  padding-right: 10px;
+}
+
+.window-form label.child {
+  width: 53px;
+  padding-right: 10px;
+  margin-left: 37px;
+}
 
 .window-form input:hover {
   background-color: #ebebeb;
 }
 
-.window-form input:active {
+.window-form input:active,
+.window-form input:focus  {
   background-color: #ffffff;
-  border: 2px solid #f6f6f6;
-  outline: none;
+  outline: 2px solid #f6f6f6;
 }
 
-.window-form input:focus {
-  background-color: #ffffff;
-  border: 2px solid #f6f6f6;
-  outline: none;
-}
-
-.window-form input[name="date-arrival"],
-.window-form input[name="date-departure"] {
+.window-form input.date {
   width: 340px;
-  margin-left: 20px;
+  padding-right: 21px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 300px -185px;
 }
 
-.window-form label.date {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 95px;
+.window-form input.date:hover {
+  background-position: 300px -269px;
 }
 
-.window-form label.date::after {
-  position: absolute;
-  top: 0;
-  left: 430;
-  content: "";
-  display: block;
-  width: 21px;
-  height: 22px;
-  background: url("../img/sprite.png");
-  background-position: -131px -5px;
-  cursor: pointer;
+.window-form input.date:active {
+  background-position: 300px -227px;
 }
 
-.window-form label.date:hover::after {
-  background-position: -193px -5px;
-}
-
-.window-form label.date:active::after {
-  background-position: -162px -5px;
-}
-
-.window-form input[name="adult"],
-.window-form input[name="child"] {
-  width: 50px;
-
-}
-
-.btn {
-  border: none;
-  width: 37px;
-  height: 37px;
-  cursor: pointer;
+.window-form input.quantity {
+  width: 117px;
+  padding: 0 35px;
+  text-align: center;
+  background:
+  url("../img/sprite.png") no-repeat -10px -879px,
+  url("../img/sprite.png") no-repeat 72px -1044px;
   background-color: #f2f2f2;
 }
 
-.btn-subtract {
-  background: url("../img/sprite.png");
-  background-position: -185px -94px;
+.window-form input.quantity:hover {
+  background:
+  url("../img/sprite.png") no-repeat -10px -989px,
+  url("../img/sprite.png") no-repeat 72px -1154px;
+  background-color: #f2f2f2;
 }
 
-.btn-subtract:hover {
-    background-position: -185px -184px;
-}
-
-.btn-subtract:active {
-    background-position: -185px -139px;
-}
-
-.btn-add {
-  width: 35px;
-  height: 35px;
-  background: url("../img/sprite.png") no-repeat;
-  background-position: -256px -5px;
-}
-
-.btn-add:hover {
-    background-position: -230px -95px;
-}
-
-.btn-add:active {
-    background-position: -234px -50px;
+.window-form input.quantity:active {
+  background:
+  url("../img/sprite.png") no-repeat -10px -934px,
+  url("../img/sprite.png") no-repeat 72px -1099px;
+  background-color: #f2f2f2;
 }
 
 .btn-search {
@@ -425,6 +397,10 @@ input[type="text"]:-ms-input-placeholder {
   line-height: 47px;
 }
 
+.footer-copyright span {
+  line-height: 47px;
+}
+
 .btn-social {
   display: inline-block;
   vertical-align: top;
@@ -445,46 +421,48 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .btn-tw {
-  background-position: -230px -173px;
+  background-position: -10px -1209px;
 }
 
 .btn-tw:active {
-  background-position: -128px -230px;
+  background-position: -10px -1276px;
 }
 
 .btn-fb {
-  background-position: -177px -37px;
+  background-position: -10px -568px;
 }
 
 .btn-fb:active {
-  background-position: -5px -94px;
+  background-position: -10px -635px;
 }
 
 .btn-youtube {
-  background-position: -185px -230px;
+  background-position: -10px -1343px;
 }
 
 .btn-youtube:active {
-  background-position: -242px -230px;
+  background-position: -10px -1410px;
 }
+
 
 .logo-html {
   display: inline-block;
   vertical-align: middle;
   width: 113px;
   height: 39px;
+  line-height: 47px;
   margin: 0 5px;
   background: url("../img/sprite.png");
-  background-position: -62px -94px;
+  background-position: -10px -702px;
   font-size: 0;
 }
 
 .logo-html:hover {
-  background-position: -5px -192px;
+  background-position: -10px -820px;
 }
 
 .logo-html:active {
-  background-position: -62px -143px;
+  background-position: -10px -761px;
 }
 
 
@@ -537,33 +515,33 @@ input[type="text"]:-ms-input-placeholder {
   height: 22px;
   margin-top: -13px;
   background: url("../img/sprite.png");
-  background-position: -225px -5px;
+  background-position: -10px -316px;
 }
 
 .filter input[type="checkbox"]:hover + label::before {
-  background-position: -145px -37px;
+  background-position: -10px -526px;
 }
 
 .filter input[type="checkbox"]:active + label::before {
-  background-position: -113px -37px;
+  background-position: -10px -484px;
 }
 
 .filter input[type="checkbox"]:checked + label::before {
   width: 26px;
   height: 22px;
-  background-position: -5px -37px;
+  background-position: -10px -358px;
 }
 
 .filter input[type="checkbox"]:checked:hover + label::before {
   width: 26px;
   height: 22px;
-  background-position: -77px -37px;
+  background-position: -10px -442px;
 }
 
 .filter input[type="checkbox"]:checked:active + label::before {
   width: 22px;
   height: 22px;
-  background-position: -41px -37px;
+  background-position: -10px -484px;
 }
 
 .range-filter {
@@ -691,33 +669,36 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .arrow-up {
-  background-position: -68px -5px;
+  background-position: -10px -100px;
   margin-right: 10px;
 }
 
 .arrow-up:hover{
-  background-position: -110px -5px;
+  background-position: -10px -160px;
 }
 
 .arrow-up:active {
-  background-position: -89px -5px;
+  background-position: -10px -130px;
 }
 
 .arrow-down {
-  background-position: -5px -5px;
+  background-position: -10px -10px;
 }
 
-.arrow-down:hover{
-  background-position: -47px -5px;
+.arrow-down:hover {
+  background-position: -10px -70px;
 }
 
 .arrow-down:active {
-  background-position: -26px -5px;
+  background-position: -10px -40px;
 }
 
-/*Наверно нужно делать с помощью иконочного шрифта */
-.sorting-by-arrow .active {
-  background-position: -89px -5px;
+.sorting-by-arrow .arrow-up.active {
+  background-position: -10px -130px;
+}
+
+.sorting-by-arrow .arrow-down.active {
+  background-position: -10px -130px;
 }
 
 /*Список отелей*/
