@@ -1,0 +1,197 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-arrow-down {
+    width: 11px;
+    height: 10px;
+    background-position: -5px -5px;
+}
+
+.sprite-arrow-down-down {
+    width: 11px;
+    height: 10px;
+    background-position: -26px -5px;
+}
+
+.sprite-arrow-down-hvr {
+    width: 11px;
+    height: 10px;
+    background-position: -47px -5px;
+}
+
+.sprite-arrow-up {
+    width: 11px;
+    height: 10px;
+    background-position: -68px -5px;
+}
+
+.sprite-arrow-up-down {
+    width: 11px;
+    height: 10px;
+    background-position: -89px -5px;
+}
+
+.sprite-arrow-up-hvr {
+    width: 11px;
+    height: 10px;
+    background-position: -110px -5px;
+}
+
+.sprite-calendar {
+    width: 21px;
+    height: 22px;
+    background-position: -131px -5px;
+}
+
+.sprite-calendar-down {
+    width: 21px;
+    height: 22px;
+    background-position: -162px -5px;
+}
+
+.sprite-calendar-hvr {
+    width: 21px;
+    height: 22px;
+    background-position: -193px -5px;
+}
+
+.sprite-checkbox {
+    width: 22px;
+    height: 22px;
+    background-position: -224px -5px;
+}
+
+.sprite-checkbox-checked {
+    width: 26px;
+    height: 22px;
+    background-position: -5px -37px;
+}
+
+.sprite-checkbox-checked-dis {
+    width: 26px;
+    height: 22px;
+    background-position: -41px -37px;
+}
+
+.sprite-checkbox-checked-hvr {
+    width: 26px;
+    height: 22px;
+    background-position: -77px -37px;
+}
+
+.sprite-checkbox-dis {
+    width: 22px;
+    height: 22px;
+    background-position: -113px -37px;
+}
+
+.sprite-checkbox-hvr {
+    width: 22px;
+    height: 22px;
+    background-position: -145px -37px;
+}
+
+.sprite-fb {
+    width: 47px;
+    height: 47px;
+    background-position: -177px -37px;
+}
+
+.sprite-fb-down {
+    width: 47px;
+    height: 47px;
+    background-position: -5px -94px;
+}
+
+.sprite-logo {
+    width: 113px;
+    height: 39px;
+    background-position: -62px -94px;
+}
+
+.sprite-logo-down {
+    width: 113px;
+    height: 39px;
+    background-position: -62px -143px;
+}
+
+.sprite-logo-hvr {
+    width: 113px;
+    height: 39px;
+    background-position: -5px -192px;
+}
+
+.sprite-minus {
+    width: 35px;
+    height: 35px;
+    background-position: -185px -94px;
+}
+
+.sprite-minus-down {
+    width: 35px;
+    height: 35px;
+    background-position: -185px -139px;
+}
+
+.sprite-minus-hvr {
+    width: 35px;
+    height: 35px;
+    background-position: -185px -184px;
+}
+
+.sprite-plus {
+    width: 35px;
+    height: 35px;
+    background-position: -256px -5px;
+}
+
+.sprite-plus-down {
+    width: 35px;
+    height: 35px;
+    background-position: -234px -50px;
+}
+
+.sprite-plus-hvr {
+    width: 35px;
+    height: 35px;
+    background-position: -230px -95px;
+}
+
+.sprite-slide {
+    width: 20px;
+    height: 23px;
+    background-position: -230px -140px;
+}
+
+.sprite-slide-hvr {
+    width: 20px;
+    height: 23px;
+    background-position: -260px -140px;
+}
+
+.sprite-tw {
+    width: 47px;
+    height: 47px;
+    background-position: -230px -173px;
+}
+
+.sprite-tw-down {
+    width: 47px;
+    height: 47px;
+    background-position: -128px -230px;
+}
+
+.sprite-youtube {
+    width: 47px;
+    height: 47px;
+    background-position: -185px -230px;
+}
+
+.sprite-youtube-down {
+    width: 47px;
+    height: 47px;
+    background-position: -242px -230px;
+}
