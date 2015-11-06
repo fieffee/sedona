@@ -283,9 +283,9 @@ input[type="text"]:-ms-input-placeholder {
 } */
 
 .window-form input {
-  height: 37px;
+  height: 36px;
   margin-bottom: 30px;
-  padding: 15px;
+  padding: 5px 15px;
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
@@ -298,12 +298,11 @@ input[type="text"]:-ms-input-placeholder {
 
 .window-form label {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
   width: 103px;
   padding-right: 10px;
   font-size: 14px;
   font-weight: bold;
-  line-height: 26px;
 }
 
 .window-form label.child {
@@ -347,7 +346,7 @@ input[type="text"]:-ms-input-placeholder {
 .btn {
   display: inline-block;
   vertical-align: top;
-  height: 37px;
+  height: 36px;
   width: 35px;
   cursor: pointer;
 }
@@ -516,6 +515,10 @@ input[type="text"]:-ms-input-placeholder {
   display: none;
 }
 
+.filter label {
+  width: 115px;
+}
+
 .filter input[type="checkbox"] + label {
   display: block;
   position: relative;
@@ -524,23 +527,51 @@ input[type="text"]:-ms-input-placeholder {
   cursor: pointer;
 }
 
-
 .filter input[type="checkbox"] + label::before {
   content: "";
   display: block;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   width: 22px;
   height: 22px;
-  margin-top: -13px;
   background: url("../img/sprite.png");
   background-position: -10px -316px;
 }
 
+.filter input[type="checkbox"] + label:hover::before {
+  background-position: -10px -526px;
+}
+
+
+.filter input[type="checkbox"] + label:active::before {
+  background-position: -10px -484px;
+}
+
+.filter input[type="checkbox"]:checked + label::before {
+  width: 26px;
+  height: 22px;
+  background-position: -10px -358px;
+}
+
+.filter input[type="checkbox"]:checked + label:hover::before {
+  width: 26px;
+  height: 22px;
+  background-position: -10px -442px;
+}
+
+.filter input[type="checkbox"]:checked + label:active::before {
+  width: 26px;
+  height: 22px;
+  background-position: -10px -400px;
+}
+
+
+/*
 .filter input[type="checkbox"]:hover + label::before {
   background-position: -10px -526px;
 }
+
 
 .filter input[type="checkbox"]:active + label::before {
   background-position: -10px -484px;
@@ -562,7 +593,7 @@ input[type="text"]:-ms-input-placeholder {
   width: 22px;
   height: 22px;
   background-position: -10px -484px;
-}
+} */
 
 .range-filter {
   float: right;
