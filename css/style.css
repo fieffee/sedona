@@ -12,11 +12,11 @@ body {
   text-transform: uppercase;
   color: #333333;
   background: #f2f2f2;
+  word-wrap: break-word;
 }
 
 h1 {
   margin: 0;
-  margin-bottom: 30px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -34,7 +34,6 @@ h2 {
 
 h3 {
   margin: 0;
-  margin-bottom: 30px;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
@@ -43,7 +42,7 @@ h3 {
 
 a {
   text-decoration: none;
-  cursor: url("..img/cursor.png") pointer; /*Разобраться*/
+  cursor: pointer;
 }
 
 .clearfix::after {
@@ -54,12 +53,13 @@ a {
 
 .container {
   position: relative;
-  width: 1200px;
+  min-width: 768px;
+  max-width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
 }
 
 .main-header {
@@ -86,25 +86,25 @@ a {
   color: #000000;
 }
 
-.main-navigation li:nth-child(1) {
+.main-navigation li:nth-child(4n-3) {
   margin-left: 6%;
 }
 
-.main-navigation li:nth-child(2) {
+.main-navigation li:nth-child(4n-2) {
   margin-right: 8%;
 }
 
-.main-navigation li:nth-child(4) {
+.main-navigation li:nth-child(4n) {
   margin-right: 6%;
 }
 
-.main-navigation li:nth-child(1),
-.main-navigation li:nth-child(2) {
+.main-navigation li:nth-child(4n-3),
+.main-navigation li:nth-child(4n-2) {
   text-align: left;
 }
 
-.main-navigation li:nth-child(3),
-.main-navigation li:nth-child(4) {
+.main-navigation li:nth-child(4n-1),
+.main-navigation li:nth-child(4n) {
   text-align: right;
 }
 
@@ -133,99 +133,158 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 5;
   width: 138px;
   height: 70px;
   margin-left: -69px;
 }
 
 .intro {
+  position: relative;
   padding-top: 75px;
-  padding-bottom: 80px;
+  padding-bottom: 75px;
   background: #e4f1fa url("../img/bg_intro.jpg") no-repeat 50% 20%;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   text-align: center;
 }
 
 /*значения указаны для подстраховки*/
 .intro .title-image {
-  width: 458;
-  height: 352;
+  width: 458px;
+  height: 352px;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 57px;
+  background: url("../img/intro_border.png") no-repeat 50% 50%;
+  background-size: 100% 57px;
 }
 
 .mainpage-content .title {
+  padding-top: 60px;
+  padding-bottom: 53px;
   text-align: center;
-  padding: 60px 312px;
-  padding-bottom: 50px;
+}
+
+.title h1 {
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.title .description {
+  width: 530px;
+  margin: 0 auto;
+}
+
+.main-reason {
+  display: table;
+  width: 100%;
+  padding: 55px 0;
+  padding-bottom: 25px;
 }
 
 .main-reason .text-block {
-  width: 19%;
-  min-height: 150px;
-  padding: 56px 7%;
-  padding-bottom: 50px;
+  display: table-cell;
+  float: left;
+  width: 25%;
+  min-height: 176px;
+  padding: 0 4%;
   color: #ffffff;
   text-align: center;
+  vertical-align: middle;
 }
 
 .main-reason h3 {
+  width: 170px;
+  margin: 0 auto;
+  margin-bottom: 23px;
   color: #ffffff;
+}
+
+.text-block .number {
+  padding-bottom: 21px;
 }
 
 .sedona-city {
   background: #81b3d2 url("../img/photo-1.jpg") no-repeat 100% 50%;
-  background-size: 66% auto;
+  background-size: 66% 100%;
 }
 
 .bridge-devil {
   background: #81b3d2 url("../img/photo-2.jpg") no-repeat 0 50%;
-  background-size: 66% auto;
+  background-size: 66% 100%;
 }
 
 .bridge-devil .text-block {
   float: right;
 }
 
-.number {
-  padding-bottom: 25px;
-}
-
 .features {
-  padding-top: 60px;
-  padding-bottom: 82px;
+  display: table;
+  width: 100%;
+  padding: 60px 0;
 }
 
 .features .text-block {
+  display: table-cell;
   float: left;
   width: 25%;
-  padding: 0 4%;
-  min-height: 184px;
+  min-height: 212px;
+  padding: 0 3%;
   text-align: center;
+  vertical-align: middle;
+}
+
+.features .text-block:nth-child(3) {
+  width: 22%;
+  padding: 0 5.5%;
 }
 
 .features img {
   width: 75px;
   height: 72px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+}
+
+.features h3 {
+  margin-bottom: 23px;
 }
 
 .other-reasons {
-  padding-top: 50px;
-  padding-bottom: 65px;
+  display: table;
+  width: 100%;
+  padding: 46px 0;
+  padding-bottom: 40px;
   background: #eeeeee;
 }
 
 .other-reasons .text-block {
+  display: table-cell;
   float: left;
-  width: 25%;
-  min-height: 140px;
-  padding: 0 4%;
+  width: 23%;
+  min-height: 170px;
+  padding: 0 5%;
   text-align: center;
+  vertical-align: middle;
+}
+
+.other-reasons h3 {
+  width: 145px;
+  margin: 0 auto;
+  margin-bottom: 23px;
 }
 
 /*Форма поиска отелей*/
 .search-hotel {
   position: relative;
-  padding-top: 60px;
+  padding-top: 54px;
   line-height: 24px;
   text-align: center;
 }
@@ -233,9 +292,9 @@ a {
 .btn-open-form {
   display: inline-block;
   vertical-align: top;
-  width: 570px;
-  margin-top: 50px;
-  padding: 31px 0;
+  width: 568px;
+  margin-top: 47px;
+  padding: 30px 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -244,10 +303,12 @@ a {
 }
 
 .window-form {
+  display:none;
+
   position: absolute;
   left: 50%;
   z-index: 2;
-  width: 460px;
+  width: 458px;
   margin-left: -284px;
   padding: 55px 55px;
   font-size: 0;
@@ -255,8 +316,30 @@ a {
   line-height: 26px;
   text-align: left;
   background-color: #ffffff;
-
 }
+
+.window-form-open {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(-400px); }
+  70% { transform: translateY(-200px); }
+  90% { transform: translateY(-100px); }
+  100% { transform: translateY(-50px); }
+}
+
+.window-form-error  {
+animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
 
 input[type="text"]::-webkit-input-placeholder {
   color: #000000;
@@ -282,8 +365,28 @@ input[type="text"]:-ms-input-placeholder {
   color: #000000;
 } */
 
+.window-form label {
+  display:inline-block;
+  vertical-align: middle;
+  width: 108px;
+  padding-right: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 38px;
+}
+
+.window-form label.date {
+  position: relative;
+}
+
+.window-form label.child {
+  width: 60px;
+  padding-right: 5px;
+  margin-left: 54px;
+}
+
 .window-form input {
-  height: 36px;
+  height: 28px;
   margin-bottom: 30px;
   padding: 5px 15px;
   font-size: 14px;
@@ -296,19 +399,15 @@ input[type="text"]:-ms-input-placeholder {
   color: #000000;
 }
 
-.window-form label {
-  display: inline-block;
-  vertical-align: baseline;
-  width: 103px;
-  padding-right: 10px;
-  font-size: 14px;
-  font-weight: bold;
+.window-form input.date {
+  width: 315px;
 }
 
-.window-form label.child {
-  width: 63px;
-  padding-right: 10px;
-  margin-left: 37px;
+.window-form input.quantity {
+  width: 42px;
+  padding: 5px 5px;
+  text-align: center;
+  background-color: #f2f2f2;
 }
 
 .window-form input:hover {
@@ -321,63 +420,64 @@ input[type="text"]:-ms-input-placeholder {
   outline: 2px solid #f6f6f6;
 }
 
-.window-form input.date {
-  width: 340px;
-  padding-right: 21px;
+.window-form .calendar {
+  position: absolute;
+  left: 430px;
+  top: 50%;
+  width: 28px;
+  height: 38px;
+  margin-top: -20px;
+  background-color: none;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-position: 300px -185px;
+  background-position: -10px -184px;
+  cursor: pointer;
+  z-index: 5;
 }
 
-.window-form input.date:hover {
-  background-position: 300px -269px;
+.window-form .calendar:hover {
+  background-position: -10px -268px;
 }
 
-.window-form input.date:active {
-  background-position: 300px -227px;
-}
-
-.window-form input.quantity {
-  width: 45px;
-  text-align: center;
-  background-color: #f2f2f2;
+.window-form .calendar:active {
+  background-position: -10px -226px;
 }
 
 .btn {
   display: inline-block;
   vertical-align: top;
-  height: 36px;
-  width: 35px;
+  height: 38px;
+  width: 30px;
   cursor: pointer;
 }
 
 .btn-substract {
- background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -879px;
+ background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -878px;
 }
 
  .btn-add {
-  background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -1044px;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat -14px -1043px;
 }
 
 .btn-substract:hover {
- background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -989px;
+ background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -988px;
 }
 
  .btn-add:hover {
-  background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -1154px;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat -14px -1153px;
 }
 
 .btn-substract:active{
- background: #f2f2f2 url("../img/sprite.png") no-repeat 10px -934px;
+ background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -933px;
 }
 
  .btn-add:active {
-  background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -1099px;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat -14px -1098px;
 }
 
 .btn-search {
-  width: 460px;
-  margin-top: 25px;
+  width: 457px;
+  margin-top: 24px;
   padding: 16px 0;
   font-size: 21px;
   text-transform: uppercase;
@@ -397,7 +497,8 @@ input[type="text"]:-ms-input-placeholder {
 
 .main-footer {
   width: 100%;
-  padding: 36px 0;
+  min-height: 84px;
+  padding-top: 36px;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -422,12 +523,16 @@ input[type="text"]:-ms-input-placeholder {
   line-height: 47px;
 }
 
+.footer-social {
+  font-size: 0;
+}
+
 .btn-social {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
+  margin-right: 7px;
   width: 47px;
   height: 47px;
-  margin: 0 5px;
   font-size: 0;
   background: #81b3d2 url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -487,7 +592,8 @@ input[type="text"]:-ms-input-placeholder {
 
 /*Стили для catalog.html */
 .filter {
-  padding-top: 30px;
+  position: relative;
+  padding-top: 28px;
   padding-bottom: 5px;
   color: #ffffff;
   background: #6993ba url("../img/bg_hotels.jpg") no-repeat 50% 50%;
@@ -515,24 +621,21 @@ input[type="text"]:-ms-input-placeholder {
   display: none;
 }
 
-.filter label {
-  width: 115px;
-}
-
 .filter input[type="checkbox"] + label {
-  display: block;
   position: relative;
-  padding-left: 40px;
+  display: block;
+  width: 115px;
   margin-bottom: 25px;
+  padding-left: 40px;
   cursor: pointer;
 }
 
 .filter input[type="checkbox"] + label::before {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 22px;
   height: 22px;
   background: url("../img/sprite.png");
@@ -544,7 +647,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 
-.filter input[type="checkbox"] + label:active::before {
+.filter input[type="checkbox"]:disabled + label::before {
   background-position: -10px -484px;
 }
 
@@ -560,60 +663,60 @@ input[type="text"]:-ms-input-placeholder {
   background-position: -10px -442px;
 }
 
-.filter input[type="checkbox"]:checked + label:active::before {
+.filter input[type="checkbox"]:checked:disabled + label::before {
   width: 26px;
   height: 22px;
   background-position: -10px -400px;
 }
 
-
-/*
-.filter input[type="checkbox"]:hover + label::before {
-  background-position: -10px -526px;
-}
-
-
-.filter input[type="checkbox"]:active + label::before {
-  background-position: -10px -484px;
-}
-
-.filter input[type="checkbox"]:checked + label::before {
-  width: 26px;
-  height: 22px;
-  background-position: -10px -358px;
-}
-
-.filter input[type="checkbox"]:checked:hover + label::before {
-  width: 26px;
-  height: 22px;
-  background-position: -10px -442px;
-}
-
-.filter input[type="checkbox"]:checked:active + label::before {
-  width: 22px;
-  height: 22px;
-  background-position: -10px -484px;
-} */
-
 .range-filter {
   float: right;
-  width: 328px;
+  max-width: 40%;
   margin-right: 6%;
 }
 
-.price-controls input {
-  width: 157px;
-  height: 34px;
-  border: 2px solid #ffffff;
-  background: none;
+.price-controls {
+  font-size: 0;
 }
 
-.min-price {
-  margin-left: -23px;
+.price-controls input {
+  display: inline-block;
+  border: none;
+  background: none;
+  width: 30px;
+}
+
+.min-price,
+.max-price {
+  display: inline-block;;
+  width: 156px;
+  height: 21px;
+  padding: 7px 0;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.min-price  {
+  position: relative;
+  border-right:none;
 }
 
 .max-price {
-  margin-left: -27px;
+  border-left: none;
+}
+
+.min-price::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 30px;
+  margin-top: -15px;
+  background: #ffffff;
 }
 
 .range-controls {
@@ -627,30 +730,45 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 256px;
   height: 2px;
   background: #ffffff;
 }
 
 .range-controls .toggle {
+  position: absolute;
+  top: 10px;
+  left: 0px;
   width: 4px;
   height: 4px;
   border: 8px solid #fff;
   border-radius: 50%;
   background: #ababab;
-  position: absolute;
-  top: 10px;
-  left: 0px;
   cursor: pointer;
 }
 
+.range-controls .toggle:hover {
+  background: #435268;
+}
 
 .range-controls .toggle-max {
-  left: 145px;
+  left: 256px;
+}
+
+.btn-filter {
+  position: absolute;
+  bottom: 30px;
+  right: 167px;
+  border: 2px solid #ffffff;
+  background: none;
+  width: 133px;
+  height: 32px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .sorting {
-  padding: 30px 6%;
+  padding: 29px 6%;
   background-color: #fefefe;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -666,7 +784,7 @@ input[type="text"]:-ms-input-placeholder {
 
 .sorting-by-condition {
   float: left;
-  width: 565px;
+  width: 420px;
   margin-right: 30px;
   font-size: 12px;
   line-height: 26px;
@@ -709,11 +827,11 @@ input[type="text"]:-ms-input-placeholder {
 .sorting-by-arrow {
   float: right;
   max-width: 40px;
+  line-height: 26px;
 }
 
 .arrow {
   display: inline-block;
-  vertical-align: top;
   width: 11px;
   height: 10px;
   background: url("../img/sprite.png");
@@ -749,7 +867,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .sorting-by-arrow .arrow-down.active {
-  background-position: -10px -130px;
+  background-position: -10px -40px;
 }
 
 /*Список отелей*/
@@ -782,7 +900,6 @@ input[type="text"]:-ms-input-placeholder {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
-
   color: #000000;
 }
 

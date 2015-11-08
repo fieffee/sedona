@@ -115,7 +115,7 @@
 .-logo-down {
     width: 113px;
     height: 39px;
-    background-position: -62px -143px;
+    background-position: -10px -761px;
 }
 
 .-logo-hvr {

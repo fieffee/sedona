@@ -1,4 +1,4 @@
-<!DOCTYPE ht>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -39,16 +39,15 @@
 
         <section class="mainpage-content">
           <div class="title">
-            <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+            <h1>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
             <div class="description">Рассмотрим 5 причин, по которыми Седона круче, чем Гранд Каньон!</div>
           </div>
 
-          <div class="main-reason sedona-city ">
+          <div class="main-reason sedona-city clearfix">
             <div class="text-block">
-              <h3>Настоящий<br>
-                городок</h3>
+              <h3>Настоящий городок</h3>
               <div class="number">&mdash; №1 &mdash;</div>
-              <div class="description">Седона - не аттракцион для туристов, там течет своя жизнь</div>
+              <div class="description">Седона &mdash; не аттракцион для&nbsp;туристов, там течет своя жизнь</div>
             </div>
           </div>
 
@@ -56,17 +55,17 @@
             <div class="text-block">
               <img src="img/house.png" width="75" height="72" alt="Домик">
               <h3>Жилье</h3>
-              <div class="description">Рекомендуем пожить в настоящем мотеле, все как в кино</div>
+              <div class="description">Рекомендуем пожить в&nbsp;настоящем мотеле, все&nbsp;как&nbsp;в&nbsp;кино</div>
             </div>
             <div class="text-block">
               <img src="img/burger.png" width="74" height="70" alt="Бургер">
               <h3>Еда</h3>
-              <div class="description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+              <div class="description">Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</div>
             </div>
             <div class="text-block">
               <img src="img/gift.png" width="64" height="76" alt="Подарок">
               <h3>Сувениры</h3>
-              <div class="description">Не только китайского, но&nbsp;и&nbsp;местного&nbsp;производства!</div>
+              <div class="description">Не только китайского, но&nbsp;и&nbsp;местного производства!</div>
             </div>
           </div>
 
@@ -74,11 +73,9 @@
             <div class="text-block">
               <h3>Там есть мост&nbsp;дьявола</h3>
               <div class="number">&mdash; №2 &mdash;</div>
-              <div class="description">Да, по нему можно пройти! Если&nbsp;конечно вы осмелитесь
-              </div>
+              <div class="description">Да, по нему можно пройти! Если&nbsp;конечно вы&nbsp;осмелитесь</div>
             </div>
           </div>
-
 
           <div class="other-reasons clearfix">
             <div class="text-block">
@@ -94,7 +91,7 @@
             <div class="text-block">
               <h3>Мало туристов</h3>
               <div class="number">&mdash; №5 &mdash;</div>
-              <div class="description">Большинство едет в Гранд Каньон и толпятся там</div>
+              <div class="description">Большинство едет в Гранд Каньон и толпится там</div>
             </div>
           </div>
         </section>
@@ -104,9 +101,13 @@
               и мы покажем вам лучшие предложения гостиниц в Седоне</div>
             <a href="#" class="btn-open-form">Поиск гостиницы в Седоне</a>
             <form class="window-form" action="#" method="post">
-              <label for="date-arrival" class="date">Дата заезда:</label>
+              <label for="date-arrival" class="date">Дата заезда:
+                <span class="calendar"></span>
+              </label>
               <input class="date" type="text" name="date-arrival" value="" placeholder="24 апреля 2014" id="date-arrival">
-              <label for="date-departure" class="date">Дата выезда:</label>
+              <label for="date-departure" class="date">Дата выезда:
+                <span class="calendar"></span>
+              </label>
               <input class="date" type="text" name="date-departure" value="" placeholder="4 июля 2014" id="date-departure">
               <label class="adult" for="adult">Взрослые:</label>
               <btn class="btn btn-substract"></btn>
@@ -144,5 +145,7 @@
       </footer>
 
     </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
