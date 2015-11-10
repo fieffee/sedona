@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" >
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" >
   </head>
 
   <body>
@@ -81,7 +81,7 @@
             <div class="text-block">
               <h3>Небольшая площадь</h3>
               <div class="number">&mdash; №3 &mdash;</div>
-              <div class="description">Все достопримечате-<br>льности находятся очень близко</div>
+              <div class="description">Все достопримеча-<br>тельности находятся очень близко</div>
             </div>
             <div class="text-block">
               <h3>Красивая дорога</h3>
@@ -95,12 +95,13 @@
             </div>
           </div>
         </section>
+
         <section class="search-hotel">
             <h2>Заинтересовались?</h2>
             <div> Укажите предполагаемые даты поездки,<br>
               и мы покажем вам лучшие предложения гостиниц в Седоне</div>
             <a href="#" class="btn-open-form">Поиск гостиницы в Седоне</a>
-            <form class="window-form" action="#" method="post">
+            <form class="window-form no-js" action="#" method="post">
               <label for="date-arrival" class="date">Дата заезда:
                 <span class="calendar"></span>
               </label>
@@ -110,20 +111,19 @@
               </label>
               <input class="date" type="text" name="date-departure" value="" placeholder="4 июля 2014" id="date-departure">
               <label class="adult" for="adult">Взрослые:</label>
-              <btn class="btn btn-substract"></btn>
+              <span class="btn btn-substract"></span>
               <input class="quantity" type="text" name="adult" placeholder="2" value="" id="adult">
-              <btn class="btn btn-add"></btn>
+              <span class="btn btn-add"></span>
               <label class="child" for="child">Дети:</label>
-              <btn class="btn btn-substract"></btn>
+              <span class="btn btn-substract"></span>
               <input class="quantity" type="text" name="child" placeholder="0" value="" id="child">
-              <btn class="btn btn-add"></btn>
+              <span class="btn btn-add"></span>
               <button type="submit" class="btn-search">Найти</button>
             </form>
         </section>
 
-        <section class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418696.7210907924!2d-111.29938265430005!3d34.92982815938105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1446389997966" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+        <section class="map no-js">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418906.7213945707!2d-111.47527589371325!3d34.88865897279789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1447184530303" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
       </main>
 
@@ -143,9 +143,9 @@
           <a class="logo-html" href="http://www.htmlacademy.ru">Html Academy</a>
         </section>
       </footer>
-
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/scripts.min.js"></script>
+
   </body>
 </html>

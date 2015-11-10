@@ -1,9 +1,3 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-weight: normal;
   font-size: 14px;
@@ -45,6 +39,11 @@ a {
   cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .clearfix::after {
   content: '';
   display: table;
@@ -53,12 +52,11 @@ a {
 
 .container {
   position: relative;
-  min-width: 768px;
-  max-width: 1200px;
+  width: 1200px;
+  /*min-width: 768px;
+  max-width: 1200px;*/ /*Вариант резиновой верстки с таким макетом не возможен, падает страница с отелями, но ниже есть мой вариант :)*/
   margin: 0 auto;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -70,10 +68,12 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 0;
 }
 
 .main-navigation li {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 20%;
 }
 
@@ -128,7 +128,7 @@ a {
   opacity: 0.3;
 }
 
-/* 2me: выравнивание логотипа по центру за счет отрицательного margin, равного половине его ширины*/
+/*Выравнивание логотипа по центру за счет отрицательного margin, равного половине его ширины*/
 .logo {
   position: absolute;
   top: 0;
@@ -141,6 +141,7 @@ a {
 
 .intro {
   position: relative;
+  height: 358px;
   padding-top: 75px;
   padding-bottom: 75px;
   background: #e4f1fa url("../img/bg_intro.jpg") no-repeat 50% 20%;
@@ -167,38 +168,39 @@ a {
 }
 
 .mainpage-content .title {
+  width: 530px;
+  margin: 0 auto;
   padding-top: 60px;
-  padding-bottom: 53px;
+  padding-bottom: 47px;
   text-align: center;
 }
 
 .title h1 {
-  width: 530px;
-  margin: 0 auto;
   margin-bottom: 30px;
 }
-
-.title .description {
-  width: 530px;
-  margin: 0 auto;
+.title .description{
+  line-height: 26px;
 }
 
 .main-reason {
-  display: table;
-  width: 100%;
   padding: 55px 0;
   padding-bottom: 25px;
 }
 
 .main-reason .text-block {
-  display: table-cell;
   float: left;
   width: 25%;
   min-height: 176px;
   padding: 0 4%;
   color: #ffffff;
   text-align: center;
-  vertical-align: middle;
+}
+
+.bridge-devil .text-block {
+  float: right;
+  width: 25%;
+  min-height: 176px;
+  padding: 0 4%;
 }
 
 .main-reason h3 {
@@ -213,33 +215,25 @@ a {
 }
 
 .sedona-city {
-  background: #81b3d2 url("../img/photo-1.jpg") no-repeat 100% 50%;
+  background: #81b3d2 url("../img/sedona-city.jpg") no-repeat 100% 50%;
   background-size: 66% 100%;
 }
 
 .bridge-devil {
-  background: #81b3d2 url("../img/photo-2.jpg") no-repeat 0 50%;
+  background: #81b3d2 url("../img/bridge-devil.jpg") no-repeat 0 50%;
   background-size: 66% 100%;
 }
 
-.bridge-devil .text-block {
-  float: right;
-}
-
 .features {
-  display: table;
-  width: 100%;
   padding: 60px 0;
 }
 
 .features .text-block {
-  display: table-cell;
   float: left;
   width: 25%;
-  min-height: 212px;
-  padding: 0 3%;
+  min-height: 210px;
+  padding: 0 4%;
   text-align: center;
-  vertical-align: middle;
 }
 
 .features .text-block:nth-child(3) {
@@ -258,21 +252,17 @@ a {
 }
 
 .other-reasons {
-  display: table;
-  width: 100%;
-  padding: 46px 0;
-  padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 36px;
   background: #eeeeee;
 }
 
 .other-reasons .text-block {
-  display: table-cell;
   float: left;
   width: 23%;
   min-height: 170px;
   padding: 0 5%;
   text-align: center;
-  vertical-align: middle;
 }
 
 .other-reasons h3 {
@@ -280,6 +270,23 @@ a {
   margin: 0 auto;
   margin-bottom: 23px;
 }
+
+/*Вариант выравнивания по середине контента
+.other-reasons {
+  display: table;
+  width: 100%;
+}
+
+.other-reasons .text-block {
+  display: table-cell;
+  width: 33%;
+  height: 170px;
+  padding: 55px 5%;
+  padding-bottom: 23px;
+  text-align: center;
+  vertical-align: middle;
+}
+*/
 
 /*Форма поиска отелей*/
 .search-hotel {
@@ -311,8 +318,8 @@ a {
   width: 458px;
   margin-left: -284px;
   padding: 55px 55px;
-  font-size: 0;
   font-weight: bold;
+  font-size: 0;
   line-height: 26px;
   text-align: left;
   background-color: #ffffff;
@@ -320,18 +327,23 @@ a {
 
 .window-form-open {
   display: block;
-  animation: bounce 0.6s;
+  animation: slide 0.3s;
 }
 
-@keyframes bounce {
-  0% { transform: translateY(-400px); }
-  70% { transform: translateY(-200px); }
-  90% { transform: translateY(-100px); }
-  100% { transform: translateY(-50px); }
+.no-js {
+  display: block;
+}
+
+@keyframes slide {
+  0% { transform: translateY(-40px); }
+  25% { transform: translateY(-30px); }
+  50% { transform: translateY(-20px); }
+  75% { transform: translateY(-10px); }
+  100% { transform: translateY(-5px); }
 }
 
 .window-form-error  {
-animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 
 @keyframes shake {
@@ -339,7 +351,6 @@ animation: shake 0.6s;
   10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
   20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
-
 
 input[type="text"]::-webkit-input-placeholder {
   color: #000000;
@@ -357,22 +368,15 @@ input[type="text"]:-ms-input-placeholder {
   color: #000000;
 }
 
-/* почему так не работает?
-input[type="text"]::-webkit-input-placeholder,
-input[type="text"]::-moz-placeholder,
-input[type="text"]:-moz-placeholder,
-input[type="text"]:-ms-input-placeholder {
-  color: #000000;
-} */
 
 .window-form label {
   display:inline-block;
   vertical-align: middle;
   width: 108px;
   padding-right: 5px;
-  font-size: 14px;
   font-weight: bold;
-  line-height: 38px;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 .window-form label.date {
@@ -389,14 +393,14 @@ input[type="text"]:-ms-input-placeholder {
   height: 28px;
   margin-bottom: 30px;
   padding: 5px 15px;
-  font-size: 14px;
   font-weight: bold;
+  font-size: 14px;
   line-height: 26px;
-  border: none;
-  background-color: #f2f2f2;
-  cursor: pointer;
   text-transform: uppercase;
   color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
 }
 
 .window-form input.date {
@@ -424,6 +428,7 @@ input[type="text"]:-ms-input-placeholder {
   position: absolute;
   left: 430px;
   top: 50%;
+  z-index: 5;
   width: 28px;
   height: 38px;
   margin-top: -20px;
@@ -432,7 +437,6 @@ input[type="text"]:-ms-input-placeholder {
   background-repeat: no-repeat;
   background-position: -10px -184px;
   cursor: pointer;
-  z-index: 5;
 }
 
 .window-form .calendar:hover {
@@ -452,7 +456,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .btn-substract {
- background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -878px;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -878px;
 }
 
  .btn-add {
@@ -460,7 +464,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .btn-substract:hover {
- background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -988px;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -988px;
 }
 
  .btn-add:hover {
@@ -468,7 +472,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .btn-substract:active{
- background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -933px;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat -10px -933px;
 }
 
  .btn-add:active {
@@ -495,10 +499,14 @@ input[type="text"]:-ms-input-placeholder {
   opacity: 0.3;
 }
 
+.map.no-js {
+  background: #cbdda9 url("../img/map.jpg") no-repeat;
+}
+
 .main-footer {
+  display: table;
   width: 100%;
-  min-height: 84px;
-  padding-top: 36px;
+  height: 120px;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -508,19 +516,20 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .main-footer section {
-  float: left;
+  display: table-cell;
   width: 33%;
   text-align: center;
+  vertical-align: middle;
 }
 
 .footer-hashtag span {
   font-weight: bold;
   font-size: 21px;
-  line-height: 47px;
+  line-height: 26px;
 }
 
 .footer-copyright span {
-  line-height: 47px;
+  line-height: 26px;
 }
 
 .footer-social {
@@ -530,12 +539,11 @@ input[type="text"]:-ms-input-placeholder {
 .btn-social {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 7px;
   width: 47px;
   height: 47px;
+  margin-right: 7px;
   font-size: 0;
-  background: #81b3d2 url("../img/sprite.png");
-  background-repeat: no-repeat;
+  background: #81b3d2 url("../img/sprite.png") no-repeat;
 }
 
 .btn-social:hover {
@@ -575,11 +583,10 @@ input[type="text"]:-ms-input-placeholder {
   vertical-align: middle;
   width: 113px;
   height: 39px;
-  line-height: 47px;
   margin: 0 5px;
-  background: url("../img/sprite.png");
-  background-position: -10px -702px;
   font-size: 0;
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -10px -702px;
 }
 
 .logo-html:hover {
@@ -602,11 +609,12 @@ input[type="text"]:-ms-input-placeholder {
 .choise-1,
 .choise-2 {
   float: left;
-  width: 20%;
+  width: 19%;
+  margin-right: 1%;
 }
 
 .choise-1 {
-  margin-left: 6%;
+  padding-left: 6%;
 }
 
 .filter h3 {
@@ -638,7 +646,7 @@ input[type="text"]:-ms-input-placeholder {
   display: block;
   width: 22px;
   height: 22px;
-  background: url("../img/sprite.png");
+  background: url("../img/sprite.png") no-repeat;
   background-position: -10px -316px;
 }
 
@@ -671,8 +679,8 @@ input[type="text"]:-ms-input-placeholder {
 
 .range-filter {
   float: right;
-  max-width: 40%;
-  margin-right: 6%;
+  max-width: 48%;
+  padding-right: 6%;
 }
 
 .price-controls {
@@ -681,19 +689,22 @@ input[type="text"]:-ms-input-placeholder {
 
 .price-controls input {
   display: inline-block;
-  border: none;
-  background: none;
+  vertical-align: top;
   width: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  background: none;
+  border: none;
 }
 
 .min-price,
 .max-price {
   display: inline-block;;
+  vertical-align: top;
   width: 156px;
   height: 21px;
   padding: 7px 0;
   border: 2px solid #ffffff;
-  text-align: center;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
@@ -701,7 +712,7 @@ input[type="text"]:-ms-input-placeholder {
 
 .min-price  {
   position: relative;
-  border-right:none;
+  border-right: none;
 }
 
 .max-price {
@@ -759,16 +770,18 @@ input[type="text"]:-ms-input-placeholder {
   position: absolute;
   bottom: 30px;
   right: 167px;
-  border: 2px solid #ffffff;
-  background: none;
   width: 133px;
   height: 32px;
+  font-size: 14px;
+  line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  border: 2px solid #ffffff;
+  background: none;
 }
 
 .sorting {
-  padding: 29px 6%;
+  padding: 29px 0;
   background-color: #fefefe;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -777,6 +790,7 @@ input[type="text"]:-ms-input-placeholder {
   float: left;
   width: 135px;
   margin-right: 30px;
+  padding-left: 6%;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -827,14 +841,16 @@ input[type="text"]:-ms-input-placeholder {
 .sorting-by-arrow {
   float: right;
   max-width: 40px;
+  padding-right: 6%;
   line-height: 26px;
 }
 
 .arrow {
   display: inline-block;
+  vertical-align: middle;
   width: 11px;
   height: 10px;
-  background: url("../img/sprite.png");
+  background: url("../img/sprite.png") no-repeat;
 }
 
 .arrow-up {
@@ -871,13 +887,12 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 /*Список отелей*/
-
 .hotels-list {
   background-color: #fefefe;
 }
 
 .item {
-  padding: 30px 6%;
+  padding: 30px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -886,11 +901,13 @@ input[type="text"]:-ms-input-placeholder {
   width: 135px;
   height: 90px;
   margin-right: 30px;
+  padding-left: 6%;
 }
 
 .item .content {
-  float: left;
+  float: right;
   width: 890px;
+  padding-right: 6%;
 }
 
 .content .hotel-name {
@@ -956,8 +973,8 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .btn-info:active {
-  background-color: #5496bd;
   color: #94b9d2;
+  background-color: #5496bd;
 }
 
 .btn-booking {
@@ -974,14 +991,44 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .btn-booking:active {
-  background-color: #503e33;
   color: #8f8681;
+  background-color: #503e33;
 }
 
 .more-info .rating {
   float: right;
   width: 110px;
   padding: 3px 17px;
-  background: #f2f2f2;
   text-align: center;
+  background: #f2f2f2;
 }
+
+/*Для резиновой верстки*/
+/*
+.container {
+  min-width: 768px;
+  max-width: 1200px;
+}
+
+.search-result {
+  width: 19%;
+  margin-right: 1%;
+}
+
+.sorting-by-condition {
+  width: 59%;
+  margin-right: 1%;
+}
+
+.sorting-by-arrow {
+  max-width: 20%;
+}
+
+.item .photo-hotel {
+  width: 19%;
+  margin-right: 1%;
+}
+
+.item .content {
+  width: 68%;
+}*/

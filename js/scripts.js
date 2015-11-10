@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var arrival = form.querySelector("[name=date-arrival]");
   var departure = form.querySelector("[name=date-departure]")
 
+  form.classList.remove("no-js");
+
   link.addEventListener("click", function(event) {
     event.preventDefault();
     form.classList.toggle("window-form-open");
