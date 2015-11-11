@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   link.addEventListener("click", function(event) {
     event.preventDefault();
     form.classList.toggle("window-form-open");
+    form.classList.add("window-form-slide");
     arrival.focus();
   });
 
@@ -17,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
        event.preventDefault();
        console.log("Выберите интересующие Вас даты");
        form.classList.add("window-form-error");
+       setTimeout(function() {
+         form.classList.remove("window-form-slide")
+         form.classList.remove("window-form-error");
+       }, 1000);
        }
   });
 
