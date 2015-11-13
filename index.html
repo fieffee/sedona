@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" >
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
@@ -13,16 +13,16 @@
       <header class="main-header clearfix">
         <nav class="main-navigation">
           <ul>
-            <li>
-              <a class="active" href="#">Информация</a>
+            <li class="navigation-point">
+              <a class="active" href="index.html">Информация</a>
             </li>
-            <li>
+            <li class="navigation-point">
               <a href="#">Фото и видео</a>
             </li>
-            <li>
+            <li class="navigation-point">
               <a href="#">Карта штата</a>
             </li>
-            <li>
+            <li class="navigation-point">
               <a href="hotels.html">Гостиницы</a>
             </li>
           </ul>
@@ -40,14 +40,14 @@
         <section class="mainpage-content">
           <div class="title">
             <h1>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
-            <div class="description">Рассмотрим 5 причин, по которыми Седона круче, чем Гранд Каньон!</div>
+            <div class="description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</div>
           </div>
 
           <div class="main-reason sedona-city clearfix">
             <div class="text-block">
               <h3>Настоящий городок</h3>
               <div class="number">&mdash; №1 &mdash;</div>
-              <div class="description">Седона &mdash; не аттракцион для&nbsp;туристов, там течет своя жизнь</div>
+              <div class="description">Седона &mdash; не аттракцион для&nbsp;туристов, там течет своя&nbsp;жизнь</div>
             </div>
           </div>
 
@@ -55,7 +55,7 @@
             <div class="text-block">
               <img src="img/house.png" width="75" height="72" alt="Домик">
               <h3>Жилье</h3>
-              <div class="description">Рекомендуем пожить в&nbsp;настоящем мотеле, все&nbsp;как&nbsp;в&nbsp;кино</div>
+              <div class="description">Рекомендуем пожить в&nbsp;настоящем мотеле, все&nbsp;как&nbsp;в&nbsp;кино!</div>
             </div>
             <div class="text-block">
               <img src="img/burger.png" width="74" height="70" alt="Бургер">
@@ -86,19 +86,19 @@
             <div class="text-block">
               <h3>Красивая дорога</h3>
               <div class="number">&mdash; №4 &mdash;</div>
-              <div class="description">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</div>
+              <div class="description">Ехать в Седону из Лас&nbsp;Вегаса совсем не&nbsp;скучно!</div>
             </div>
             <div class="text-block">
               <h3>Мало туристов</h3>
               <div class="number">&mdash; №5 &mdash;</div>
-              <div class="description">Большинство едет в Гранд Каньон и толпится там</div>
+              <div class="description">Большинство едет в Гранд Каньон и толпится&nbsp;там</div>
             </div>
           </div>
         </section>
 
         <section class="search-hotel">
             <h2>Заинтересовались?</h2>
-            <div> Укажите предполагаемые даты поездки,<br>
+            <div class="description"> Укажите предполагаемые даты поездки,<br>
               и мы покажем вам лучшие предложения гостиниц в Седоне</div>
             <a href="#" class="btn-open-form">Поиск гостиницы в Седоне</a>
             <form class="window-form no-js" action="#" method="post">
@@ -112,18 +112,18 @@
               <input class="date" type="text" name="date-departure" value="" placeholder="4 июля 2014" id="date-departure">
               <label class="adult" for="adult">Взрослые:</label>
               <span class="btn btn-substract"></span>
-              <input class="quantity" type="text" name="adult" placeholder="2" value="" id="adult">
+              <input class="quantity" type="text" name="adult" value="" placeholder="2" id="adult">
               <span class="btn btn-add"></span>
               <label class="child" for="child">Дети:</label>
               <span class="btn btn-substract"></span>
-              <input class="quantity" type="text" name="child" placeholder="0" value="" id="child">
+              <input class="quantity" type="text" name="child" value="" placeholder="0" id="child">
               <span class="btn btn-add"></span>
               <button type="submit" class="btn-search">Найти</button>
             </form>
         </section>
 
         <section class="map no-js">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418906.7213945707!2d-111.47527589371325!3d34.88865897279789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1447184530303" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418906.7213945707!2d-111.47527589371325!3d34.88865897279789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1447184530303" width="100%" height="593" style="border:0" allowfullscreen></iframe>
         </section>
       </main>
 
@@ -145,7 +145,7 @@
       </footer>
     </div>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
 
   </body>
 </html>

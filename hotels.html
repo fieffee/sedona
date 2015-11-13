@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Седона-Гостиницы</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
@@ -13,17 +13,17 @@
       <header class="main-header clearfix">
         <nav class="main-navigation">
           <ul>
-            <li>
+            <li class="navigation-point">
               <a href="index.html">Информация</a>
             </li>
-            <li>
+            <li class="navigation-point">
               <a href="#">Фото и видео</a>
             </li>
-            <li>
+            <li class="navigation-point">
               <a href="#">Карта штата</a>
             </li>
-            <li>
-              <a class="active" href="#">Гостиницы</a>
+            <li class="navigation-point">
+              <a class="active" href="hotels.html">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -33,7 +33,7 @@
       </header>
 
       <main class="catalog-main">
-        <section class="filter wrapper clearfix">
+        <section class="filter clearfix">
           <form action="#" method="post">
               <div class="choise-1">
                 <h3>Инфраструктура:</h3>
@@ -41,7 +41,7 @@
                 <label for="Pool">Бассейн</label>
                 <input type="checkbox" name="Parking" value="Parking" id="Parking">
                 <label for ="Parking">Парковка</label>
-                <input type="checkbox" name="Wi-fi" value="Wi-fi" id="Wi-fi" checked>
+                <input type="checkbox" name="Wi-fi" value="Wi-fi" id="Wi-fi">
                 <label for="Wi-fi">Wi-fi</label>
               </div>
               <div class="choise-2">
@@ -51,7 +51,7 @@
                   <input type="checkbox" name="Motel" value="Motel" id="Motel" checked>
                   <label for="Motel">Мотель</label>
                   <input type="checkbox" name="Apartments" value="Apartments" id="Apartments" checked>
-                  <label for="Apartments">Аппартаменты</label>
+                  <label for="Apartments">Апартаменты</label>
               </div>
               <div class="range-filter">
                 <h3>Стоимость в сутки (р):</h3>
@@ -71,20 +71,20 @@
             </form>
         </section>
 
-        <section class="sorting wrapper clearfix">
+        <section class="sorting clearfix">
           <div class="search-result">
             <span class="title">Найдено:</span>
             <span>3</span>
           </div>
           <div class="sorting-by-condition">
             <span class="title">Сортировка:</span>
-            <a href="#">По цене</a>
+            <a class="active" href="#">По цене</a>
             <a href="#">По типу</a>
-            <a class="active" href="#">По рейтингу</a>
+            <a href="#">По рейтингу</a>
           </div>
           <div class="sorting-by-arrow">
-            <a href="#" class="arrow arrow-up active"></a>
-            <a href="#" class="arrow arrow-down"></a>
+            <a href="#" class="arrow arrow-up"></a>
+            <a href="#" class="arrow arrow-down active"></a>
           </div>
         </section>
 
@@ -144,23 +144,26 @@
               <img src="img/hotel3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
               <div class="hotel-info">
                 <a class="hotel-name" href="#">Villas at Poco Diablo</a>
-                <span class="type">Аппартаменты</span>
-                <span>от <span class="price">4000 р.</span></span>
-                <a href="#" class="btn btn-info">Подробнее</a>
-                <a href="#" class="btn btn-booking">Забронировать</a>
-              </div>
-              <div class="rating-info">
-                <div class="rating-star">
-                  <span class="star no-star"></span>
-                  <span class="star no-star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
+                <div class="info">
+                  <span class="type">Апартаменты</span>
+                  <span>от <span class="price">4000 р.</span></span>
                 </div>
+                <div class="more-info">
+                  <a href="#" class="btn btn-info">Подробнее</a>
+                  <a href="#" class="btn btn-booking">Забронировать</a>
+                </div>
+            </div>
+            <div class="rating-info clearfix">
+              <div class="rating-star">
+                <span class="star no-star"></span>
+                <span class="star no-star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
               <div class="rating">Рейтинг: 9,2</div>
             </div>
           </article>
-
         </section>
       </main>
 
